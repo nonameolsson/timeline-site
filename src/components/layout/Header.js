@@ -1,6 +1,8 @@
 import React from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import LogoIcon from '../../svg/LogoIcon';
+// import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { GitHub } from 'react-feather';
+
+import TimelineIcon from '../../svg/TimelineIcon';
 import Button from '../Button';
 
 const Header = () => (
@@ -8,26 +10,21 @@ const Header = () => (
     <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
       <div className="flex items-center text-2xl">
         <div className="w-12 mr-3">
-          <LogoIcon />
+          <TimelineIcon />
         </div>
-        Lander
-      </div>
-      <div className="flex mt-4 sm:mt-0">
-        <AnchorLink className="px-4" href="#features">
-          Features
-        </AnchorLink>
-        <AnchorLink className="px-4" href="#services">
-          Services
-        </AnchorLink>
-        <AnchorLink className="px-4" href="#stats">
-          Stats
-        </AnchorLink>
-        <AnchorLink className="px-4" href="#testimonials">
-          Testimonials
-        </AnchorLink>
+        YourTimeline.app
       </div>
       <div className="hidden md:block">
-        <Button className="text-sm">Start Free Trial</Button>
+        <a
+          href="https://github.com/nonameolsson/timeline-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="text-sm" hre>
+            <GitHub className="float-left mr-4" />
+            Open on GitHub
+          </Button>
+        </a>
       </div>
     </div>
   </header>
